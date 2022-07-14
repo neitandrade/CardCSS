@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+*{font-family:'Roboto', sans-serif;}
+    
+
+    .content{
+        display: flex;
+        justify-content: center; /*eixo x*/
+        align-items: center; /*eixo y*/
+        align-content: center;/* pack items around the center */
+        width: 100%; /*preencher toda a tela - largura*/
+        height: 100vh; /*preencher toda a tela - altura*/
+    }
+    .card {
+        box-shadow: 0px 2px 18px #3f51b54f;
+        border-radius: 20px;
+        width: 450px;
+    }
+
+    .media-card{
+        background: url(https://quintacapa.com.br/wp-content/uploads/2018/04/Tonari.no_.Totoro.full_.69835.0.0.jpg) center/cover;
+        /*center/cover = não importa o tamanho da imagem, ela sempre vai ficar no meio e preencher toda largura e altura da div */
+        height: 300px;
+        width: 100%;
+    }
+    .top-card {
+        padding: 0px 20px;
+        padding-bottom: 20px;
+    }
+    
+    .bottom-card {
+        padding: 20px;
+        padding-bottom: 5px;
+    }
+    button.actions {
+        background: none;
+        padding: 10px;
+        border: none;
+        color: purple;
+        cursor: pointer;
+    }
+
+    .tittle{
+        color: rgb(3, 0, 51);
+    }
+
+    .subtittle{
+        color: rgb(45, 44, 65);
+    }
+
+    .bottom-text{
+        color: rgb(45, 44, 65);
+    }
+    
