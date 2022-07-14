@@ -1,0 +1,95 @@
+*{ /*reset no css */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    
+    width: 80%;
+    height: 500px;
+    border: 1px solid rgb(9, 99, 44); /*para ver o espaço ocupado */
+    margin: 0px auto; /* eixo y e eixo x */
+    position: relative; /* as outras imagens terão de respeitar a position do board */
+    overflow: hidden; /* tudo que sai do board não aparece */
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute; /* nenhuma img vai interferir no comportamento da outra */
+    bottom: 0; /*fixar em baixo no board */
+    width: 50px;
+    animation: pipe-animation 2s infinite linear; 
+    /*propriedade colocada após a keyframe 
+    infinite = loop 
+    linear = tempo constante = em movimento */
+}
+
+/*animação*/  
+@keyframes pipe-animation{
+    
+    from{
+        right: -80px;
+    } /*start*/
+    
+    to{
+        right: 100%;
+    } /*end*/
+}
+
+.mario{
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out; /*final lento */
+}
+
+@keyframes jump{
+    /*aqui usaremos % da animação, ja que tem inicio, meio e fim */
+    0% {
+        bottom: 0
+    }
+
+    40%{
+        bottom: 100px;
+    }
+
+    50%{
+        bottom: 100px
+    }
+
+    60% {
+        bottom: 100px;
+    }
+
+    70%{
+        bottom: 100px;
+    }
+    
+    100%{
+        bottom: 0
+    }
+}
+
+
+.clouds{
+    position: absolute;
+    width: 450px;
+    animation: clouds 20s infinite linear;
+    
+}
+
+@keyframes clouds{
+    
+    from{
+        right: -450px;
+    } /*start*/
+    
+    to{
+        right: 100%;
+    } /*end*/
+
+}
