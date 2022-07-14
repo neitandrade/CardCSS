@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* one page */
+    background: #434750;
+}
+
+ul{
+    position: relative;
+    margin: 50px;
+    transform: skewY(-15deg); /*skew = torcer ---- S.I = deg*/
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    background: #3e3f46;
+    width: 200px;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+
+ul li:hover{
+    background: #253341;
+    transition: 0.5s;
+    transform: translateX(-50px);
+}
+
+ul li::before{ /*add antes dos elementos ul li */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #2e3133;
+    transform-origin: right; /*usada para alterar a posição dos elementos transformados*/
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+ul li:hover::before{
+    background: #1a212b;
+}
+
+ul li::after{ /*add após elementos ul li */
+    content: ''; /*nenhum conteúdo a ser add em texto*/
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+ul li:hover::after{
+    background: #1e2935 ;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+ul li:hover a{
+    color: #fff;
+}
+
+ul li:last-child::after{
+  /* last child vai selecionar o ultimo elemento filho(li) do elemento pai(ul) */
+  box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+} 
